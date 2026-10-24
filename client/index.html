@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Preload DM Sans fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload Indian Rupee symbol font (₹ U+20B9) -->
+    <link rel="preload" href="/fonts/rupee.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Default title - overridden per-page via react-helmet-async -->
+    <title>Ramyam Holidays | Travel Agency in Coimbatore</title>
+    <meta name="description" content="Ramyam Holidays is a trusted travel agency in Coimbatore offering holiday packages, tour packages, flight bookings, visa assistance and more. Call +91 86680 98039." />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0f766e" />
+
+    <!-- Google Analytics 4 - TODO: Replace G-XXXXXXXXXX with your Measurement ID -->
+    <!-- Place this AFTER the Consent Mode initialisation if using cookie consent -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', { send_page_view: false });
+    </script>
+    -->
+
+    <!-- Google Tag Manager - TODO: Replace GTM-XXXXXXX with your container ID -->
+    <!--
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    -->
+  </head>
+  <body>
+    <!-- GTM noscript fallback - TODO: Uncomment and replace GTM-XXXXXXX -->
+    <!--
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    -->
+
+    <!-- Skip to content for accessibility -->
+    <a
+      href="#main-content"
+      class="skip-to-content"
+      style="position:absolute;left:-9999px;z-index:9999;padding:8px 16px;background:#0f766e;color:#fff;text-decoration:none;border-radius:4px;top:8px;"
+      onfocus="this.style.left='8px';"
+      onblur="this.style.left='-9999px';"
+    >
+      Skip to main content
+    </a>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

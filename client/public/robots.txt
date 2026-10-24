@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block admin or API routes from indexing
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.ramyamholidays.com/sitemap.xml
+
+# Crawl-delay for polite crawlers
+Crawl-delay: 10

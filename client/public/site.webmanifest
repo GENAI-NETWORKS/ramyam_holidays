@@ -1,0 +1,19 @@
+{
+  "name": "Ramyam Holidays",
+  "short_name": "Ramyam",
+  "description": "Trusted travel agency in Coimbatore: tour packages, visa assistance, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["travel", "business"]
+}
