@@ -10,7 +10,8 @@ import { destinations, getDomesticDestinations, getInternationalDestinations } f
 
 const FILTERS = [
   { value: 'all', label: 'All Destinations' },
-  { value: 'domestic', label: 'Domestic' },
+  { value: 'karnataka-goa', label: 'Karnataka & Goa' },
+  { value: 'domestic', label: 'All Domestic' },
   { value: 'international', label: 'International' },
 ];
 
@@ -20,6 +21,8 @@ const DestinationsPage = () => {
   const filtered =
     activeFilter === 'all'
       ? destinations
+      : activeFilter === 'karnataka-goa'
+      ? destinations.filter((d) => d.region === 'Karnataka' || d.id === 'goa')
       : activeFilter === 'domestic'
       ? getDomesticDestinations()
       : getInternationalDestinations();

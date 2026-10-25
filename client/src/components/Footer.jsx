@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import {
   Phone,
-  Mail,
   MapPin,
   Clock,
+  Zap,
   Facebook,
   Instagram,
 } from 'lucide-react';
@@ -168,22 +168,13 @@ const Footer = () => {
                 ))}
               </div>
 
-              <div className="flex gap-3 items-center">
-                <Mail size={16} className="text-primary-400 flex-shrink-0" aria-hidden="true" />
-                <a
-                  href={`mailto:${email}`}
-                  className="text-sm hover:text-primary-400 transition-colors"
-                  itemProp="email"
-                >
-                  {email}
-                </a>
-              </div>
-
-              <div className="flex gap-3 items-start">
-                <Clock size={16} className="text-primary-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                <div className="text-sm space-y-0.5">
-                  <div>Mon–Sat: 9:00 AM – 7:00 PM</div>
-                  <div>Sunday: 10:00 AM – 4:00 PM</div>
+              <div className="flex gap-3 items-center pt-1">
+                <span className="flex h-2.5 w-2.5 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <div className="text-sm font-semibold text-emerald-400">
+                  Available 24 × 7 (Round the Clock)
                 </div>
               </div>
             </address>

@@ -11,6 +11,8 @@ import {
   Compass,
   Globe,
   Heart,
+  GraduationCap,
+  Briefcase,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionHeading from '../SectionHeading';
@@ -18,6 +20,9 @@ import { packages } from '../../data/packages';
 
 const CATEGORIES = [
   { id: 'all', label: 'All Packages', icon: Sparkles },
+  { id: 'karnataka', label: 'Karnataka & Goa', icon: MapPin },
+  { id: 'student', label: 'School & College', icon: GraduationCap },
+  { id: 'corporate', label: 'Corporate', icon: Briefcase },
   { id: 'domestic', label: 'Domestic', icon: Compass },
   { id: 'international', label: 'International', icon: Globe },
   { id: 'honeymoon', label: 'Honeymoon', icon: Heart },
@@ -35,6 +40,15 @@ const FeaturedPackagesSection = () => {
 
   const filteredPackages = useMemo(() => {
     if (activeTab === 'all') return allCurated;
+    if (activeTab === 'karnataka') {
+      return packages.filter((p) => p.tags?.includes('Karnataka') || p.destination === 'Goa').slice(0, 4);
+    }
+    if (activeTab === 'student') {
+      return packages.filter((p) => p.category === 'school' || p.category === 'college').slice(0, 4);
+    }
+    if (activeTab === 'corporate') {
+      return packages.filter((p) => p.category === 'corporate').slice(0, 4);
+    }
     if (activeTab === 'domestic') {
       const list = packages.filter((p) => p.type === 'domestic' && p.category !== 'pilgrimage');
       return list.slice(0, 4);

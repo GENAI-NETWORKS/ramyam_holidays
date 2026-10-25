@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_LINKS = [
@@ -13,11 +13,12 @@ const NAV_LINKS = [
       { label: 'International Tours', path: '/services/international-tour-packages' },
       { label: 'Honeymoon Packages', path: '/services/honeymoon-packages' },
       { label: 'Family Holidays', path: '/services/family-holiday-packages' },
-      { label: 'Pilgrimage Tours', path: '/services/pilgrimage-tour-packages' },
+      { label: 'School & College Tours', path: '/services/school-college-tour-packages' },
       { label: 'Corporate Tours', path: '/services/corporate-tour-packages' },
+      { label: 'Pilgrimage Tours', path: '/services/pilgrimage-tour-packages' },
       { label: 'Flight Booking', path: '/services/flight-ticket-booking' },
       { label: 'Visa Assistance', path: '/services/visa-assistance' },
-      { label: 'Car Rental', path: '/services/car-rental-cab-services' },
+      { label: 'Tourist Vehicles & Cabs', path: '/services/car-rental-cab-services' },
     ],
   },
   { label: 'Destinations', path: '/destinations' },
@@ -207,6 +208,18 @@ const Header = () => {
                 )
               )}
             </nav>
+
+            {/* 24x7 Live Call Pill */}
+            <div className="hidden lg:flex items-center">
+              <a
+                href="tel:+918668098039"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all hover:scale-105"
+                title="Available 24x7 - Call Now"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
+                <span>24×7: +91 86680 98039</span>
+              </a>
+            </div>
 
             {/* Mobile Menu Toggle */}
             <div className="flex items-center lg:hidden">

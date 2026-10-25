@@ -503,7 +503,7 @@ Whether it is a family outing to Valparai or a romantic weekend at Kodaikanal, w
 
 **Call us:** +91 86680 98039 | +91 94424 68039
 **Visit us:** 92, Ellaithottam Road, Peelamedu, Coimbatore 641004
-**Office Hours:** Monday–Saturday 9 AM to 7 PM; Sunday 10 AM to 4 PM
+**Available 24 × 7:** Call or WhatsApp us anytime at +91 86680 98039
     `.trim(),
   },
   {
@@ -648,7 +648,7 @@ We specialise in creating personalised honeymoon experiences. When you book with
 - **24/7 support:** Our team is available throughout your trip for any assistance
 - **Best value guarantee:** We match the best available rates with our hotel partnerships
 
-To plan your honeymoon, call us at **+91 86680 98039** or visit our office at 92, Ellaithottam Road, Peelamedu, Coimbatore 641004. We are open Monday to Saturday 9 AM to 7 PM.
+To plan your honeymoon, call us at **+91 86680 98039** or visit our office at 92, Ellaithottam Road, Peelamedu, Coimbatore 641004. We are available **24 × 7** — call or WhatsApp us anytime.
     `.trim(),
   },
 ];

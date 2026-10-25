@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -29,10 +29,10 @@ const CONTACT_DETAILS = [
     linkLabel: 'Call Directly',
   },
   {
-    icon: Clock,
-    title: 'Business Hours',
-    content: ['Mon–Sat: 9:00 AM – 7:00 PM', 'Sunday: 10:00 AM – 4:00 PM'],
-    statusLabel: 'Open Mon–Sat 9 AM – 7 PM',
+    icon: Zap,
+    title: '24 / 7 Available',
+    content: ['Always here for you — day or night,', 'no off-hours, no wait.'],
+    statusLabel: 'Available 24 × 7',
   },
 ];
 
@@ -68,7 +68,7 @@ const ContactPage = () => {
     <>
       <SEO
         title="Contact Ramyam Holidays | Travel Agency in Peelamedu, Coimbatore"
-        description="Contact Ramyam Holidays at +91 86680 98039. Visit our office at 92, Ellaithottam Road, Peelamedu, Coimbatore 641004. Open Mon–Sat 9 AM–7 PM."
+        description="Contact Ramyam Holidays at +91 86680 98039 — available 24/7. Visit our office at 92, Ellaithottam Road, Peelamedu, Coimbatore 641004."
         canonicalPath="/contact"
         breadcrumbs={[{ name: 'Contact', path: '/contact' }]}
         structuredData={localBusinessSchema}
@@ -89,7 +89,7 @@ const ContactPage = () => {
             >
               <h1 className="text-white font-bold text-4xl md:text-5xl mb-4">Contact Us</h1>
               <p className="text-primary-200 text-lg max-w-xl">
-                Talk to our travel experts today. We are here Monday to Sunday to help you plan the perfect trip.
+                Talk to our travel experts anytime — we are available 24 × 7, every day, to help you plan the perfect trip.
               </p>
             </motion.div>
           </div>

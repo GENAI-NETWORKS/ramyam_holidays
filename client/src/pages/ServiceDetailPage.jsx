@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 import EnquiryForm from '../components/EnquiryForm';
 import WhatsAppIcon from '../components/WhatsAppIcon';
+import VehicleFleetSection from '../components/home/VehicleFleetSection';
 import { getServiceBySlug } from '../data/services';
 import { SITE_CONFIG } from '../data/siteConfig';
 
@@ -175,6 +176,10 @@ const ServiceDetailPage = () => {
             </div>
           </div>
         </section>
+
+        {service.slug === 'car-rental-cab-services' && (
+          <VehicleFleetSection />
+        )}
       </main>
     </>
   );

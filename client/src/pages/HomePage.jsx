@@ -7,6 +7,7 @@ import {
   ChevronRight,
   MapPin,
   Phone,
+  Zap,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -14,6 +15,7 @@ import SEO from '../components/SEO';
 import SectionHeading from '../components/SectionHeading';
 import DestinationCard from '../components/DestinationCard';
 import FeaturedPackagesSection from '../components/home/FeaturedPackagesSection';
+import VehicleFleetSection from '../components/home/VehicleFleetSection';
 
 import FAQAccordion from '../components/FAQAccordion';
 import EnquiryForm from '../components/EnquiryForm';
@@ -63,7 +65,7 @@ const HOME_FAQS = [
   },
   {
     question: 'Where is Ramyam Holidays located?',
-    answer: 'Ramyam Holidays is located at 92, Ellaithottam Road, Peelamedu, Coimbatore, Tamil Nadu 641004. We are easily accessible from Gandhipuram, RS Puram, Saibaba Colony, and all areas of Coimbatore. Our office is open Monday to Saturday 9 AM to 7 PM, and Sunday 10 AM to 4 PM.',
+    answer: 'Ramyam Holidays is located at 92, Ellaithottam Road, Peelamedu, Coimbatore, Tamil Nadu 641004. We are easily accessible from Gandhipuram, RS Puram, Saibaba Colony, and all areas of Coimbatore. We are available 24 × 7 — call or WhatsApp us anytime at +91 86680 98039.',
   },
   {
     question: 'Does Ramyam Holidays offer travel insurance?',
@@ -162,6 +164,7 @@ const HomePage = () => {
                 {/* Trust indicators */}
                 <div className="flex flex-wrap gap-4 mt-6">
                   {[
+                    { icon: Zap, label: '24 × 7 Available' },
                     { icon: Star, label: '4.9 Google Rating' },
                     { icon: Users, label: '5,000+ Happy Travellers' },
                     { icon: Clock, label: '15+ Years Experience' },
@@ -248,6 +251,9 @@ const HomePage = () => {
 
         {/* ─── FEATURED PACKAGES (UNIQUE HORIZONTAL TRAVEL VOUCHER PATTERN) ── */}
         <FeaturedPackagesSection />
+
+        {/* ─── COMPREHENSIVE TOURIST VEHICLE FLEET (4 TO 54 SEATER) ──────── */}
+        <VehicleFleetSection />
 
 
 
