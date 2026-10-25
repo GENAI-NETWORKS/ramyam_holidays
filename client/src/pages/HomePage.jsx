@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   Clock,
   Users,
-  Star,
   ChevronRight,
   MapPin,
   Phone,
@@ -177,7 +176,6 @@ const HomePage = () => {
                 <div className="flex flex-wrap gap-4 mt-6">
                   {[
                     { icon: Zap, label: '24 × 7 Available' },
-                    { icon: Star, label: '4.9 Google Rating' },
                     { icon: Users, label: '5,000+ Happy Travellers' },
                     { icon: Clock, label: '15+ Years Experience' },
                   ].map(({ icon: Icon, label }) => (
