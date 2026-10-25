@@ -361,7 +361,7 @@ export const packages = [
     destinationSlug: 'mysore',
     type: 'domestic',
     category: 'family',
-    image: 'https://images.unsplash.com/photo-1600100397608-f010f4439c2c?w=800&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1659126574791-13313aa424bd?w=800&q=80&auto=format&fit=crop',
     imageAlt: 'Illuminated Mysore Palace royal lighting',
     duration: '4 Days / 3 Nights',
     durationDays: 4,

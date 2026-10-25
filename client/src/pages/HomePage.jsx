@@ -20,10 +20,22 @@ import VehicleFleetSection from '../components/home/VehicleFleetSection';
 import FAQAccordion from '../components/FAQAccordion';
 import EnquiryForm from '../components/EnquiryForm';
 
-import { getFeaturedDestinations } from '../data/destinations';
+import { destinations } from '../data/destinations';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-const featuredDestinations = getFeaturedDestinations();
+// Curated 6 destinations for HomePage (Kerala, Ooty, Munnar, Goa, Mysore, Bangalore)
+const HOME_DESTINATION_IDS = [
+  'kerala',
+  'ooty-kodaikanal',
+  'munnar',
+  'goa',
+  'mysore',
+  'bangalore',
+];
+
+const homeDestinations = HOME_DESTINATION_IDS
+  .map((id) => destinations.find((d) => d.id === id))
+  .filter(Boolean);
 
 
 
@@ -226,13 +238,13 @@ const HomePage = () => {
             <SectionHeading
               eyebrow="Explore India & the World"
               title={<>Popular Destinations from <span className="gradient-text">Coimbatore</span></>}
-              description="From the misty hills of Munnar to the golden deserts of Dubai, discover our most-booked destinations."
+              description="From the misty hills of Munnar and Ooty to the heritage palaces of Mysore and Bangalore, discover our most-booked destinations."
               id="destinations-heading"
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mt-12">
-              {featuredDestinations.slice(0, 6).map((dest, i) => (
-                <div key={dest.id} className={i >= 3 ? 'hidden md:block h-full' : 'h-full'}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 mt-12">
+              {homeDestinations.map((dest, i) => (
+                <div key={dest.id} className="h-full">
                   <DestinationCard destination={dest} index={i} />
                 </div>
               ))}
