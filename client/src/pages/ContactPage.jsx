@@ -1,4 +1,4 @@
-import { Phone, MapPin, Zap } from 'lucide-react';
+import { Phone, MapPin, Zap, Instagram, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -224,6 +224,31 @@ const ContactPage = () => {
                   >
                     <WhatsAppIcon size={16} className="w-4 h-4 mr-2 text-white" />
                     WhatsApp Us
+                  </a>
+                </div>
+
+                {/* Social media connections */}
+                <div className="flex flex-wrap items-center gap-2 pt-3 mt-1 text-xs text-primary-200">
+                  <span className="font-medium mr-1 text-white/90">Follow Us:</span>
+                  <a
+                    href={SITE_CONFIG.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium transition-all hover:scale-105"
+                    aria-label="Follow Ramyam Holidays on Instagram"
+                  >
+                    <Instagram size={14} className="text-pink-300" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href={SITE_CONFIG.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium transition-all hover:scale-105"
+                    aria-label="Follow Ramyam Holidays on Facebook"
+                  >
+                    <Facebook size={14} className="text-blue-300" />
+                    <span>Facebook</span>
                   </a>
                 </div>
               </motion.div>

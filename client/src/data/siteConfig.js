@@ -52,8 +52,8 @@ export const SITE_CONFIG = {
 
   // Social media
   social: {
-    facebook: 'https://facebook.com/ramyamholidays',
-    instagram: 'https://instagram.com/ramyamholidays',
+    facebook: 'https://www.facebook.com/share/1czEYvTqYN/',
+    instagram: 'https://www.instagram.com/ramyam_holidays_/?utm_source=ig_web_button_share_sheet',
   },
 };
 

@@ -40,11 +40,6 @@ const FOOTER_LINKS = {
   ],
 };
 
-const SOCIAL_ICONS = {
-  facebook: Facebook,
-  instagram: Instagram,
-};
-
 const Footer = () => {
   const { business, social } = SITE_CONFIG;
   const { address, phones, phonesFormatted, email, openingHours } = business;
@@ -73,23 +68,30 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3">
-              {Object.entries(social).map(([platform, url]) => {
-                const Icon = SOCIAL_ICONS[platform];
-                if (!Icon) return null;
-                return (
-                  <a
-                    key={platform}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-primary-600 flex items-center justify-center transition-colors"
-                    aria-label={`Ramyam Holidays on ${platform}`}
-                  >
-                    <Icon size={16} className="text-neutral-300" />
-                  </a>
-                );
-              })}
+            <div className="pt-2">
+              <span className="text-xs uppercase tracking-wider text-neutral-400 font-semibold block mb-3">
+                Follow Us
+              </span>
+              <div className="flex items-center gap-3">
+                <a
+                  href={social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-neutral-800 hover:bg-[#1877F2] text-neutral-300 hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-sm"
+                  aria-label="Ramyam Holidays on Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href={social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-neutral-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 text-neutral-300 hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-sm"
+                  aria-label="Ramyam Holidays on Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+              </div>
             </div>
           </div>
 
