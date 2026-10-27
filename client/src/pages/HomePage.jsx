@@ -206,6 +206,9 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* ─── COMPREHENSIVE TOURIST VEHICLE FLEET (4 TO 54 SEATER) ──────── */}
+        <VehicleFleetSection />
+
         {/* ─── STATS ────────────────────────────────────────────────────────── */}
         <section className="bg-primary-700 py-12" aria-label="Ramyam Holidays statistics">
           <div className="container-site">
@@ -261,9 +264,6 @@ const HomePage = () => {
 
         {/* ─── FEATURED PACKAGES (UNIQUE HORIZONTAL TRAVEL VOUCHER PATTERN) ── */}
         <FeaturedPackagesSection />
-
-        {/* ─── COMPREHENSIVE TOURIST VEHICLE FLEET (4 TO 54 SEATER) ──────── */}
-        <VehicleFleetSection />
 
 
 

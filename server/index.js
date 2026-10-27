@@ -1,4 +1,6 @@
 require('dotenv').config();
+const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -29,7 +31,12 @@ app.use(
 );
 
 // CORS
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,https://www.ramyamholidays.com').split(',');
+const allowedOrigins = (
+  process.env.ALLOWED_ORIGINS ||
+  'http://localhost:5173,https://ramyamholidays.com,https://www.ramyamholidays.com'
+)
+  .split(',')
+  .map((o) => o.trim());
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -70,7 +77,19 @@ app.get('/api/health', (req, res) => {
 // Routes
 app.use('/api/contact', contactRouter);
 
-// 404 handler
+// Serve static client build if client/dist exists (enables unified single-process hosting)
+const clientDistPath = path.join(__dirname, '../client/dist');
+if (fs.existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
+
+// 404 handler (for unmatched /api routes or missing assets)
 app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Endpoint not found.' });
 });

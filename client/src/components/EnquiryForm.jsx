@@ -42,56 +42,21 @@ const EnquiryForm = ({ compact = false, defaultDestination = '', onSuccess }) =>
     window.open(`https://wa.me/${SITE_CONFIG.business.whatsapp}?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     setStatus('loading');
     setErrorMessage('');
     setSubmittedData(data);
 
-    // Always open WhatsApp immediately with the enquiry details
+    // Open WhatsApp directly with all enquiry details pre-formatted
     openWhatsApp(data);
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+    // Save locally in browser storage as a backup record
+    saveEnquiryLocally(data);
 
-      let result = null;
-      try {
-        result = await response.json();
-      } catch {
-        result = null;
-      }
-
-      if (response.ok && result?.success) {
-        setStatus('success');
-        reset();
-        onSuccess?.();
-        return;
-      }
-
-      // If backend returned a validation error message
-      if (result && !result.success && result.message) {
-        // Still mark success on the UI since WhatsApp was opened
-        setStatus('success');
-        reset();
-        onSuccess?.();
-        return;
-      }
-
-      // Fallback: store locally and mark success
-      saveEnquiryLocally(data);
-      setStatus('success');
-      reset();
-      onSuccess?.();
-    } catch {
-      // Graceful offline/network fallback: save locally so enquiry is never lost
-      saveEnquiryLocally(data);
-      setStatus('success');
-      reset();
-      onSuccess?.();
-    }
+    // Immediately show success screen & reset form
+    setStatus('success');
+    reset();
+    onSuccess?.();
   };
 
   const saveEnquiryLocally = (data) => {
